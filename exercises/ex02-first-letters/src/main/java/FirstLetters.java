@@ -25,7 +25,7 @@ public class FirstLetters {
      * @return the first character of each word, concatenated
      */
     public static String firstLetters(String words) {
-        // TODO: complete
+        // TO DO: complete
         StringBuilder result = new StringBuilder();
         int i = 0;
         while (i < words.length()) {
