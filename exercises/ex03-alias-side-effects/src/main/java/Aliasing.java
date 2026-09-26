@@ -1,5 +1,6 @@
 import java.util.Arrays;
 
+
 /**
  * Exercise (Chapter 1: Introduction to Java) — aliasing, references vs.
  * primitives, and side effects.
@@ -15,7 +16,7 @@ import java.util.Arrays;
  *
  * Relevant reading: 1.7. Aliases and 1.9. Parameters.
  */
-public class Aliasing {
+public class   Aliasing {
 
     public static void main(String[] args) {
         int[] data = {1, 2, 3};
@@ -40,6 +41,9 @@ public class Aliasing {
      */
     public static void addInPlace(int[] arr, int amount) {
         // TODO: complete
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] += amount;
+        }
     }
 
     /**
@@ -52,6 +56,10 @@ public class Aliasing {
      */
     public static int[] addCopy(int[] arr, int amount) {
         // TODO: complete
-        return new int[1];
+        int[] new_array = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            new_array[i] = arr[i] + amount;
+        }
+        return new_array;
     }
 }

@@ -1,3 +1,5 @@
+import static java.lang.Math.abs;
+
 /**
  * Exercise (Chapter 1: Introduction to Java) — while loops and integer
  * arithmetic.
@@ -22,6 +24,12 @@ public class DigitSum {
      */
     public static int digitSum(int n) {
         // TODO: complete
-        return 0;
+        int sum = 0;
+        int x = abs(n);
+        while (x != 0) {
+            sum += x % 10;
+            x = x / 10;
+        }
+        return sum;
     }
 }
